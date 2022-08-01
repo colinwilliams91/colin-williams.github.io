@@ -70,8 +70,9 @@ function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 
     // return input string replacing " " with "-"
-    string.replace(/[" "]/g, "-");
-    string.toLowerCase();
+    //string.replace(/[" "]/g, "-".toLowerCase);
+    var butthole = string.split(" ");
+    butthole.join("-");
     return string;
     // YOUR CODE ABOVE HERE //
 }
