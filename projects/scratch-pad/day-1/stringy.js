@@ -68,12 +68,11 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
+    // initialize new variable "words" and assign to our string .split into an array. next using .map method call a function for each element 
+    // call toLowerCase function to enforce lower case per each element in our array
+    let words = string.split(" ").map(toLowerCase);
+    return words.join("-");
 
-    // return input string replacing " " with "-"
-    //string.replace(/[" "]/g, "-".toLowerCase);
-    var butthole = string.split(" ");
-    butthole.join("-");
-    return string;
     // YOUR CODE ABOVE HERE //
 }
 
