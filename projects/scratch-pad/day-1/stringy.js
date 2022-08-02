@@ -88,13 +88,26 @@ function toDashCase(string) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+/*
+I: a letter in a string
+O: a boolean value
+C: make case insensitive
+E:
+*/
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
     
+    string.split();
+    if (string[0].localeCompare(char) === 0){
+        return true;
+    }
+    else if (string[0].localeCompare(char) !== 0){
+      return false;
+    }
+}
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String
