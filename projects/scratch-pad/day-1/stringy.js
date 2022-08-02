@@ -96,14 +96,19 @@ E:
 */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-    
-    string.split();
-    if (string[0].localeCompare(char) === 0){
-        return true;
+// establish new variables with consistent lower cases
+var lowerString = string.toLowerCase();
+var lowerChar = char.toLowerCase();
+// create switch case to compare first index of string with char
+    switch(lowerString[0]) {
+        case lowerChar:
+            return true;
+            break;
+        default:
+            return false;
+            break;
     }
-    else if (string[0].localeCompare(char) !== 0){
-      return false;
-    }
+
 }
 
     // YOUR CODE ABOVE HERE //
@@ -121,13 +126,28 @@ function beginsWith(string, char) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+/*
+I: String and single character
+O: true if string ends with input character, false otherwise
+C: case insensitive
+E:
+*/
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-
-
-    // YOUR CODE ABOVE HERE //
+// establish new variables with consistent lower cases
+var lowerString = string.toLowerCase();
+var lowerChar = char.toLowerCase();
+// accessing last index of string and comparing it strictly to char
+  if (lowerString[lowerString.length - 1] === lowerChar) {
+    return true;
+  }
+  else {
+    return false;
+  }
+  
 }
+    // YOUR CODE ABOVE HERE //
+
 
 /**
  * Given two input Strings, return the Strings concatenated into one.
