@@ -154,10 +154,18 @@ var lowerChar = char.toLowerCase();
  *
  * TIP: What's the operator to concatenate two Strings?
  */
+
+/*
+I: 2 strings
+O: 1 concatenated string
+C: n/a
+E: n/a
+*/
+
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+        // use "+" operator to concatenate strings passed as argument/parameters?
+    return stringOne + stringTwo;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -172,10 +180,17 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
+/*
+I: any number of strings
+O: 1 concatenated string
+C: store all arguments in an array
+E:
+*/
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+        // use join method to concatenate all elements passed from args array
+    return args.join("");
 
     // YOUR CODE ABOVE HERE //
 }
