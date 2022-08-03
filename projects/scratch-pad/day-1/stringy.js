@@ -239,16 +239,16 @@ E: n/a
 */
 function sortAscending(stringOne, stringTwo){
     // YOUR CODE BELOW HERE //
-  if (stringOne > stringTwo){
+        //test strings value. "higher" in alphabetical value should actually be an integer closer to 0
+    if (stringOne < stringTwo){
     return 1;
   }
-  else if (stringOne < stringTwo){
+  else if (stringOne > stringTwo){
     return -1;
   }
   else if (stringOne === stringTwo){
     return 0;
   }
-
 
     // YOUR CODE ABOVE HERE //
 }
@@ -264,7 +264,15 @@ function sortAscending(stringOne, stringTwo){
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+    if (stringOne > stringTwo){
+        return 1;
+      }
+      else if (stringOne < stringTwo){
+        return -1;
+      }
+      else if (stringOne === stringTwo){
+        return 0;
+      }
 
 
     // YOUR CODE ABOVE HERE //
