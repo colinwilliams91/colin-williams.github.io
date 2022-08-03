@@ -14,10 +14,11 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    if (Array.isArray(value) === true){
+        return true;
+    } else {
+        return false;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -33,7 +34,11 @@ function isObject(value) {
     // YOUR CODE BELOW HERE //
     
     // determine if typeOf value strictly equals object AND value is not an array AND value is not null AND value is not an instance of the date object
-    
+    if (typeOf(value) === Object && Array.isArray(value) !== true && value !== null && value !== new Date){
+        return true;
+    } else {
+        return false;
+    }
     
     
     // YOUR CODE ABOVE HERE //
