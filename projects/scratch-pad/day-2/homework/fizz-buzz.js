@@ -12,6 +12,21 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
+    var arr = [];
+    for (var i = 1; i <= 100; i++){
+        if (i % 3 === 0){
+            return "Fizz";
+        }
+        else if (i % 5 === 0){
+            return "Buzz";
+        }
+        else if (i % 3 === 0 && i % 5 === 0){
+            return "FizzBuzz";
+        }
+        arr.push[i];
+        return arr;
+    }
+
 
 
 
