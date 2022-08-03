@@ -144,17 +144,22 @@ function getObjectLength(object) {
  * print its values using console.log()?
  */
 /*
-I:
-O:
-C:
-E:
+I: object
+O: print values of input object using console.log
+C: values should be iterated over in reverse
+E: n/a
 */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  var arr = [];
+  for (var key in object){
+    arr.push(object[key]);
+  }
+
+  for (var i = arr.length - 1; i >= 0; i--){
+    console.log(arr[i]);
+  }
+  return arr;
   // YOUR CODE ABOVE HERE //
 }
 
