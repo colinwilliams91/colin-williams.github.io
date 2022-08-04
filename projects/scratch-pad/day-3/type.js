@@ -39,7 +39,7 @@ function isObject(value) {
     } else {
         return false;
     }
-    
+    // maybe use if / else if / statements for each && check?
     
     // YOUR CODE ABOVE HERE //
 }
