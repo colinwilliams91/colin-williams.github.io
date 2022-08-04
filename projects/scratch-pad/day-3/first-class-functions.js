@@ -75,10 +75,13 @@ function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     
     return function(string){
-        if (string.length)
+        if (string[string.length -1].toLowerCase() === endsWith.toLowerCase()){
+            return true;
+    } else {
+        return false;
     }
-    
-    
+
+}  
     // YOUR CODE ABOVE HERE //
 }
 
@@ -89,14 +92,43 @@ function createEndsWithFilter(endsWith) {
  * TIP: You need to loop over the Strings, right? We need to pass each String to 
  * the modify Function, but we need to collect the results into some collection.
  */
+/*
+I: Array of strings and a Function to modify a string
+O: Return input Array of strings, modified.
+C: Loop over input Array, modify and "collect" (push?) results into "some" collection
+E: N/A
+*/
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+
+    var modifiedStrings = [];
+    for (var i = 0; i < strings.length; i++){
+        function modify(string){}
+        modifiedStrings.push(strings[i]);
+    }
+    return modifiedStrings;
+
+
     // YOUR CODE ABOVE HERE //
 }
+
+/*
+function modifyStrings(strings, modify) {
+    // YOUR CODE BELOW HERE //
+    function capitalize(string){
+        return string.toUpperCase();
+    }
+    function modify(strings, func){
+    var modifiedStrings = [];
+    for (var i = 0; i < strings.length; i++){
+        modifiedStrings.push(func(strings[i]));
+    }
+    return modifiedStrings;
+}
+modify(strings, capitalize)
+    // YOUR CODE ABOVE HERE //
+}
+*/
 
 /** 
  * Given an Array of Strings and a Function designed to test the String in some 
