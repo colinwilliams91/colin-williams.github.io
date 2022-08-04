@@ -55,7 +55,7 @@ function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     
     return function(string){
-        if (string[0] === startsWith){
+        if (string[0].toLowerCase() === startsWith.toLowerCase()){
             return true;
         } else {
             return false;
@@ -74,7 +74,9 @@ function createStartsWithFilter(startsWith) {
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     
-    
+    return function(string){
+        if (string.length)
+    }
     
     
     // YOUR CODE ABOVE HERE //
