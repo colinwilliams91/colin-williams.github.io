@@ -103,8 +103,7 @@ function modifyStrings(strings, modify) {
 
     var modifiedStrings = [];
     for (var i = 0; i < strings.length; i++){
-        function modify(string){}
-        modifiedStrings.push(strings[i]);
+        modifiedStrings.push(modify(strings[i]));
     }
     return modifiedStrings;
 
@@ -112,23 +111,7 @@ function modifyStrings(strings, modify) {
     // YOUR CODE ABOVE HERE //
 }
 
-/*
-function modifyStrings(strings, modify) {
-    // YOUR CODE BELOW HERE //
-    function capitalize(string){
-        return string.toUpperCase();
-    }
-    function modify(strings, func){
-    var modifiedStrings = [];
-    for (var i = 0; i < strings.length; i++){
-        modifiedStrings.push(func(strings[i]));
-    }
-    return modifiedStrings;
-}
-modify(strings, capitalize)
-    // YOUR CODE ABOVE HERE //
-}
-*/
+
 
 /** 
  * Given an Array of Strings and a Function designed to test the String in some 
@@ -141,7 +124,10 @@ modify(strings, capitalize)
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
+    var testedStrings = [];
+    for (var i = 0; i < strings.length; i++){
+        
+    }
     
     
     
