@@ -122,24 +122,24 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    if (typeOf(value) === "string") {
-        return "String";
-    } else if (typeOf(value) === "number") {
-        return "Number";
-    } else if (typeOf(value) === "boolean") {
-        return "Boolean";
+    if (typeof(value) === "string") {
+        return "string";
+    } else if (typeof(value) === "number") {
+        return "number";
+    } else if (typeof(value) === "boolean") {
+        return "boolean";
     } else if (value instanceof Date) {
-        return "Date";
+        return "date";
     } else if (isArray(value) === true) {
-        return "Array";
+        return "array";
     } else if (isObject(value) === true) {
-        return "Object";
-    } else if (typeOf(value) === "undefined") {
-        return "Undefined";
-    } else if (typeOf(value) === "function") {
-        return "Function";
+        return "object";
+    } else if (typeof(value) === "undefined") {
+        return "undefined";
+    } else if (typeof(value) === "function") {
+        return "function";
     } else {
-        return "Null";
+        return "null";
     }
 }
     
