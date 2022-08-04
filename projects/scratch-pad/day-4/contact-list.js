@@ -43,12 +43,21 @@ function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = [];
     
-    return {
+    return { // returning an object
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        },
+        addContact: function(contact){ // {id: 2, nameFirst: "Alex", nameLast: "Aaron"}
+            contacts.push(contact);
+        },
+        findContact: function(fullName){ // "Max Gaudin"
+            // iterate through array using for loop
+                // determine if the current object relates to fullName
+                    // if true; return object
+                    // else return undefined
         }
     }
 }
