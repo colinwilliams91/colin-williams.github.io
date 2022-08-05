@@ -32,10 +32,20 @@
  *          WARNING: To pass this test, the LAST full name should have NO
  *          new-line character added after it!
  */
+/*
+I: function makeContact(id, nameFirst, nameLast). function makeContactList
+O: returns contact object. returns object that manages contacts
+C:
+E:
+*/
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
+    var contact = {};
+    contact.id = id;
+    contact.nameFirst = nameFirst;
+    contact.nameLast = nameLast;
+    return contact;
 } 
 
 
