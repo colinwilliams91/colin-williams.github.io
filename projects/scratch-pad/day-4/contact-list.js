@@ -65,14 +65,20 @@ function makeContactList() {
         },
         findContact: function(fullName){ // "Max Gaudin"
             // iterate through array using for loop
+            for (var i = 0; i < contacts.length; i++)
                 // determine if the current object relates to fullName
+                if (fullName === contact.join(" ")) {
+                    return contact;
+                } else {
+                    return undefined;
+                }
                     // if true; return object
                     // else return undefined
         }
     }
 }
 
-
+console.log(fullName);
 
 
 // YOUR CODE GOES ABOVE HERE //
