@@ -50,8 +50,8 @@ function makeContact(id, nameFirst, nameLast) {
         var fullName = contact.nameFirst + " " + contact.nameLast;
         return fullName;
     }
+    contact.fullName;
 
-    
     return contact;
 
 } 
@@ -79,15 +79,9 @@ function makeContactList() {
             // iterate through array using for loop
             for (var i = 0; i < contacts.length; i++)
                 
-            /*
-                getFullName(contact){
-                    return contact.nameFirst + " " + contact.nameLast;
-                }
-            */
-
                 // determine if the current object relates to fullName
-                if (fullName === contact.setFullName()) {
-                    return contact;
+                if (fullName === contacts[i].fullName) {
+                    return contacts[i];
                 } else {
                     return undefined;
                 }
@@ -98,7 +92,7 @@ function makeContactList() {
     return contacts;
 }
 
-makeContact("1", "Max", "Gaudin");
+//makeContact("1", "Max", "Gaudin");
 makeContactList();
 console.log(contacts);
 
