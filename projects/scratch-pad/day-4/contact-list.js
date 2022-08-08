@@ -45,14 +45,17 @@ function makeContact(id, nameFirst, nameLast) {
     contact.id = id;
     contact.nameFirst = nameFirst;
     contact.nameLast = nameLast;
-    contact.setFullName = function(){
-        return contact.nameFirst + " " + contact.nameLast;
+
+    var setFullName = function(contact) {
+        var fullName = contact.nameFirst + " " + contact.nameLast;
+        return fullName;
     }
 
-
+    
     return contact;
 
 } 
+
 
 
 function makeContactList() {
@@ -61,6 +64,7 @@ function makeContactList() {
      */
     var contacts = [];
 // how to populate this array with contact(s)?
+
 
     return { // returning an object
         // we implemented the length api for you //
@@ -71,8 +75,16 @@ function makeContactList() {
             contacts.push(contact);
         },
         findContact: function(fullName){ // "Max Gaudin"
+
             // iterate through array using for loop
             for (var i = 0; i < contacts.length; i++)
+                
+            /*
+                getFullName(contact){
+                    return contact.nameFirst + " " + contact.nameLast;
+                }
+            */
+
                 // determine if the current object relates to fullName
                 if (fullName === contact.setFullName()) {
                     return contact;
@@ -83,9 +95,13 @@ function makeContactList() {
                     // else return undefined
         }
     }
+    return contacts;
 }
 
-console.log(fullName);
+makeContact("1", "Max", "Gaudin");
+makeContactList();
+console.log(contacts);
+
 
 
 // YOUR CODE GOES ABOVE HERE //
