@@ -46,11 +46,13 @@ function makeContact(id, nameFirst, nameLast) {
     contact.nameFirst = nameFirst;
     contact.nameLast = nameLast;
 
+    /*
     var setFullName = function(contact) {
         var fullName = contact.nameFirst + " " + contact.nameLast;
         return fullName;
     }
     contact.fullName;
+    */
 
     return contact;
 
@@ -77,18 +79,21 @@ function makeContactList() {
         findContact: function(fullName){ // "Max Gaudin"
 
             // iterate through array using for loop
-            for (var i = 0; i < contacts.length; i++)
+            for (var i = 0; i < contacts.length; i++) {
                 
                 // determine if the current object relates to fullName
-                if (fullName === contacts[i].fullName) {
+                if (fullName === contacts[i].nameFirst + " " + contacts[i].nameLast) {
                     return contacts[i];
-                } else {
-                    return undefined;
-                }
-                    // if true; return object
-                    // else return undefined
+                } 
+            }
+            return undefined;
+        },
+        removeContact: function(contact) {
+            for (var)
+            contacts.splice()
         }
     }
+    
     return contacts;
 }
 
