@@ -74,13 +74,15 @@ console.log(animals);
 var duck = {
   species: "Duck",
   name: "Jerome",
-  noises: ["Quack", "Honk", "Sneeze", "Woosh"]
+  noises: ["Quack", "Honk", "Sneeze", "Woosh"],
+  friends: []
 }
 
 var platypus = {
   species: "Platypus",
   name: "Kevin",
   noises: ["Grmph", "Heeey", "Chomp", "Honk"],
+  friends: []
 }
 
 var wombat = {};
@@ -92,7 +94,7 @@ wombat.noises.push("Hiccup");
 wombat.noises.push("Nibble");
 wombat.noises.push("Peep");
 wombat["friends"] = [];
-wombat.friends.push(friends);
+//wombat.friends.push(pals);
 
 
 animals.push(wombat);
@@ -110,11 +112,19 @@ var friends = [];
 
 //friends.concat(animals);
 
-function getRandom(){
-  return Math.random();
+function getRandom(array) {
+  min = 0;
+  max = Math.floor(array.length - 1);
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
+/*function getRandom(){
+  return Math.random();
+}
+*/
+
 friends.push(animals[getRandom(animals)]["name"]);
+animals[getRandom(animals)].friends.push(friends);
 console.log(friends);
 
 /**
