@@ -92,7 +92,7 @@ wombat.noises.push("Hiccup");
 wombat.noises.push("Nibble");
 wombat.noises.push("Peep");
 wombat["friends"] = [];
-wombat.friends.concat(friends);
+wombat.friends.push(friends);
 
 
 animals.push(wombat);
@@ -114,7 +114,7 @@ function getRandom(){
   return Math.random();
 }
 
-friends.push(animals[getRandom(animals)]["name"]);
+//friends.push(animals[getRandom(animals)]["name"]);
 console.log(friends);
 
 /**
