@@ -80,7 +80,7 @@ var duck = {
 var platypus = {
   species: "Platypus",
   name: "Kevin",
-  noises: ["Grmph", "Heeey", "Chomp", "Honk"]
+  noises: ["Grmph", "Heeey", "Chomp", "Honk"],
 }
 
 var wombat = {};
@@ -91,6 +91,9 @@ wombat.noises.push("Squeak");
 wombat.noises.push("Hiccup");
 wombat.noises.push("Nibble");
 wombat.noises.push("Peep");
+wombat["friends"] = [];
+wombat.friends.concat(friends);
+
 
 animals.push(wombat);
 animals.push(platypus);
@@ -102,7 +105,17 @@ console.log(animals.length);
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var friends = [];
+// list will be an array to hold a number of similar data types
 
+//friends.concat(animals);
+
+function getRandom(animals){
+  return Math.random(animals);
+}
+
+friends.push(animals[getRandom(animals)]["name"]);
+console.log(friends);
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
