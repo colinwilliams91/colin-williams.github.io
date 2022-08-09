@@ -11,7 +11,7 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-let animal = {};
+var animal = {};
 animal.species = "Mongoose";
 animal["name"] = "Charlie";
 animal.noises = [];
@@ -23,22 +23,35 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var noises = [];
+noises[0] = "Grr";
+noises.push("Squeak");
+noises.unshift("Quack");
+noises[noises.length] = "Meow";
 
+console.log(noises.length);
+console.log(noises[noises.length -1]);
+console.log(noises);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+animal["noises"] = noises;
+noises.push("Bark");
+console.log(animal);
 
 
 /* *******************************************************************
  * Step 4 - Review
  *
  * 1. What are the different ways you can access properties on objects?
- *
+ * // object.property
+ * // object["property"]
+ * // for (var key in object) {
+ * //   object.key; object.object[key]}
  * 2. What are the different ways of accessing elements on arrays?
- *
+ * // object[i]
  * *******************************************************************
  */
 
@@ -54,8 +67,36 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var animals = [];
+animals.push(animal);
+console.log(animals);
 
+var duck = {
+  species: "Duck",
+  name: "Jerome",
+  noises: ["Quack", "Honk", "Sneeze", "Woosh"]
+}
 
+var platypus = {
+  species: "Platypus",
+  name: "Kevin",
+  noises: ["Grmph", "Heeey", "Chomp", "Honk"]
+}
+
+var wombat = {};
+wombat.species = "Wombat";
+wombat.name = "Barry";
+wombat.noises = [];
+wombat.noises.push("Squeak");
+wombat.noises.push("Hiccup");
+wombat.noises.push("Nibble");
+wombat.noises.push("Peep");
+
+animals.push(wombat);
+animals.push(platypus);
+animals.push(duck);
+console.log(animals);
+console.log(animals.length);
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
