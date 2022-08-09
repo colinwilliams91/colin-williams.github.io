@@ -114,7 +114,7 @@ function getRandom(){
   return Math.random();
 }
 
-//friends.push(animals[getRandom(animals)]["name"]);
+friends.push(animals[getRandom(animals)]["name"]);
 console.log(friends);
 
 /**
