@@ -89,8 +89,16 @@ function makeContactList() {
             return undefined;
         },
         removeContact: function(contact) {
-            for (var)
-            contacts.splice()
+            for (var i = 0; i < contacts.length; i++){
+                if (contacts[i] === contact){
+                    return contacts.splice(i, 1);
+                }
+            }
+        },
+        printAllContactNames: function(fullName) {
+            for (var i = 0; i < contacts.length; i++){
+                console.log(contacts[i]);
+            }
         }
     }
     
