@@ -110,8 +110,8 @@ var friends = [];
 
 //friends.concat(animals);
 
-function getRandom(animals){
-  return Math.random(animals);
+function getRandom(){
+  return Math.random();
 }
 
 friends.push(animals[getRandom(animals)]["name"]);
