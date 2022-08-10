@@ -15,7 +15,7 @@
 function search(array, animalName){
     for (i = 0; i < array.length; i++){
         if (animalName === array[i].name){
-            return animals[i];
+            return array[i];
         }
     }
     return null;
@@ -58,7 +58,7 @@ function add(animals, animal){
                     animals.push(animal);
                 } else {
                     return null;
-                };
+                }
             }
         } 
     } 
