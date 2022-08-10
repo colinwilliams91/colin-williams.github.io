@@ -53,6 +53,8 @@ function arrayOrObject(collection) {
 
 function capitalizeWord(string) {
     
+    var letter = string.charAt(0).toUpperCase();
+
 }
 
 //////////////////////////////////////////////////////////////////////
