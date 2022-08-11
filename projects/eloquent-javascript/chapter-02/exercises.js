@@ -30,23 +30,20 @@ function fizzBuzz(i, j) {
 // drawChessboard //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function drawChessboard(i) {
-  var result = [];
-  for (var x = 0; x <= i; x++){
-    if (x % 2 === 0){
-      result.push("#");
-    } else {
-      result.push(" ");
-    }
-    for (var y = 0; y <= i; y++){
-        if (y % 2 === 0){
-          result.push(" ");
-        } else {
-          result.push("#");
+function drawChessboard(size){
+  //let size = 8;
+  let board = "";
+
+  for (var y = 0; y < size; y++){
+    for (var x = 0; x < size; x++){
+        if ((x + y) % 2 === 0){
+          board += " ";
+        } else{
+          board += "#";
         }
-    }
-  }return result.join("\n");
-}
+      } 
+  } board += "\n";
+} 
 
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
