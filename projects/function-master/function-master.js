@@ -52,9 +52,11 @@ function arrayOrObject(collection) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
-    
-    var letter = string.charAt(0).toUpperCase();
-
+    var letter = string.charAt(0);
+    var letter2 = letter.toUpperCase();
+    var part = string.slice(1, string.length);
+    var string2 = letter2 + part;
+    return string2;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -62,7 +64,10 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
-    
+    var array = string.split(" ");
+    for (let i = 0; i < array.length; i++){
+        array[i] = capitalizeWord(array[i]);
+    } return array.join(" ");
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -70,7 +75,8 @@ function capitalizeAllWords(string) {
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
-
+    object.name = capitalizeWord(object.name);
+    return "Welcome " + object.name + "!";
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -78,7 +84,9 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
-
+    object.name = capitalizeWord(object.name);
+    object.species = capitalizeWord(object.species);
+    return "" + object.name + " is a " + object.species;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -86,7 +94,13 @@ function profileInfo(object) {
 //////////////////////////////////////////////////////////////////////
 
 function maybeNoises(object) {
-
+    if (object.noises === []){
+        return "there are no noises";
+    }else if (object.noises) {
+        return object.noises.join(" ");
+    } else {
+        return "there are no noises"
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
