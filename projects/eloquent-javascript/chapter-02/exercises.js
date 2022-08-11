@@ -41,8 +41,10 @@ function drawChessboard(size){
         } else{
           board += "#";
         }
-      } 
-  } board += "\n";
+      }
+    board += "\n";
+  }
+  console.log(board);
 } 
 
 ////////////////////////////////////////////////////////////////////////////////
