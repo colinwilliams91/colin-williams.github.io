@@ -94,12 +94,12 @@ function profileInfo(object) {
 //////////////////////////////////////////////////////////////////////
 
 function maybeNoises(object) {
-    if (object.noises === []){
+    if (!Array.isArray(object.noises)){
         return "there are no noises";
-    }else if (object.noises) {
+    }else if (object.noises.length === 0) {
+        return "there are no noises";
+    }else if (Array.isArray(object.noises)) {
         return object.noises.join(" ");
-    } else {
-        return "there are no noises"
     }
 }
 
