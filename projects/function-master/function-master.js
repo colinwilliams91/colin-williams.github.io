@@ -148,8 +148,26 @@ function isFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function nonFriends(name, array) {
-
-}
+    //input name, arrray
+    //output array
+    
+    let nonFriendsNameArr = [];
+    //loop over the array
+    for (i = 0; i < array.length; i++) {
+    
+      // check if the name exists in the friends array if it does then the indexof(name) === 0; if it does not the indexof(name) === -1
+  
+      if(array[i].friends.indexOf(name) === -1){
+  
+        //check if the name is !== array[i].name; and then push it to the empty array
+  
+        if(name !== array[i].name) {
+          nonFriendsNameArr.push(array[i].name);
+        }
+      }
+    }
+     return (nonFriendsNameArr);
+  }
 
 //////////////////////////////////////////////////////////////////////
 // Function 14 - Update Object ///////////////////////////////////////
