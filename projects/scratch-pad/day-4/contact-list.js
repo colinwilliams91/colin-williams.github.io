@@ -95,10 +95,20 @@ function makeContactList() {
                 }
             }
         },
-        printAllContactNames: function(fullName) {
+        printAllContactNames: function(){
+            var string = "";
+            var allNames = "";
             for (var i = 0; i < contacts.length; i++){
-                console.log(contacts[i]);
+                string += "." + contacts[i].nameFirst + " " + contacts[i].nameLast;
             }
+            allNames = string.split(".").join("\n");
+            // the above line will split each contact at its preceding "."
+            // and assign each string to an index in an array
+            // then it will join each index with a line break back into a string
+            return allNames.slice(1);
+            // the above line will take everything after index 1 in our new string
+            // which will be \n -> because the prompt asks to start at a contact name
+            
         }
     }
     
