@@ -174,6 +174,17 @@ function nonFriends(name, array) {
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
+    //for (var key in object) {
+        if (object.hasOwnProperty(key)) {
+            object[key] = value;
+            return object;
+        } else {
+            object[key] = value;
+            return object;
+        }
+    //}
+
+
 
 }
 
@@ -182,7 +193,17 @@ function updateObject(object, key, value) {
 //////////////////////////////////////////////////////////////////////
 
 function removeProperties(object, array) {
-
+    for (var key in object){
+        //console.log(object);
+        for (let i = 0; i < array.length; i++){
+            if (key === array[i]){
+                delete object[key];
+                console.log(object);
+            } else{
+                console.log(object);
+            }
+        } 
+    } return object[key];
 }
 
 //////////////////////////////////////////////////////////////////////
