@@ -212,6 +212,10 @@ function removeProperties(object, array) {
 
 function dedup(array) {
     return uniqueArray = Array.from(new Set(array));
+    // first return line will initialize new variable uniqueArray
+    // new Set(array) will take our passed in argument and create an array-like
+    // object with only unique elements
+    // last our Array.from will convert our array-like object to an exact array
 }
 
 //////////////////////////////////////////////////////////////////////
