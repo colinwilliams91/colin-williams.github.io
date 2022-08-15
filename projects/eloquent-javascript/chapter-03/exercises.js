@@ -11,23 +11,48 @@ function min(num1, num2) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function isEven(num) {
-  return num % 2 === 0;
+  if (num % 2 === 0){
+    return true;
+  } else if (num % 2 === 1){
+    return false;
+  } else {
+    return isEven(num + 2); 
+// to "fix" stack size recursion error change "-" operator to                           
+// "+" operator in which case will continue to add 2 (continueing even or odd trend)    
+// until positive integer is reached
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countChars() {
-
+function countChars(string, findChar){
+  let count = 0; // local/function scope variable "count" initialized
+for (let i = 0; i < string.length; i++){ // for loop to iterate through each letter in string input
+  if (string[i] === findChar){ // check if string at index "i" is equal to argument findChar
+    count += 1; // if true, increase count by +1
+  } else {
+// if false continue iteration through string indices
+  }
+}
+return count; // return count as integer representing number of argument findChar in argument string
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countBs() {
+function countBs(string){
+  let count = 0;
+  for (let i = 0; i < string.length; i++){
+    if (string[i] === "B"){
+      count += 1;
+    } else {
 
+    }
+  }
+  return count;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
