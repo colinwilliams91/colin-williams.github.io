@@ -278,6 +278,25 @@ _.each = function(collection, func){
 *   _.map([1,2,3,4], function(e){return e * 2}) -> [2,4,6,8]
 */
 
+_.map = function(collection, func){
+    // create output variable and initialize as empty array
+    var output = [];
+    // determine if collection is an array
+    if (Array.isArray(collection)) {
+        // iterate through array
+        for (let i = 0; i < collection.length; i++){
+            // push the result of invoking func on current value, index, and collection into output
+            output.push(func(collection[i], i, collection));
+        }
+            
+    } else { // else it's an object
+        // iterate through object
+            // push the result of invoking func on current value, key, and collection into output
+
+    }
+    // return output
+    return output;
+}
 
 /** _.pluck
 * Arguments:
