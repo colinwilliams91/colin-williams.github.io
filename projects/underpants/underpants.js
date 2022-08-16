@@ -154,6 +154,14 @@ _.last = function(array, number){
 *   _.indexOf(["a","b","c"], "d") -> -1
 */
 
+_.indexOf = function(array, value){
+    for (let i = 0; i < array.length; i++){
+        if (array[i] === value){
+            return i;
+        } 
+    } return -1;
+}
+
 
 /** _.contains
 * Arguments:
@@ -291,7 +299,10 @@ _.map = function(collection, func){
             
     } else { // else it's an object
         // iterate through object
+        for (let key in collection){
             // push the result of invoking func on current value, key, and collection into output
+            output.push(func(collection[key], key, collection));
+        }
 
     }
     // return output
