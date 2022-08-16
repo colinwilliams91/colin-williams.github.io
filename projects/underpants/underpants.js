@@ -178,6 +178,15 @@ _.indexOf = function(array, value){
 *   _.contains([1,"two", 3.14], "two") -> true
 */
 
+_.contains = function(array, value){
+    let boolFlag = false;
+    for (let i = 0; i < array.length; i++){
+        array[i] === value ? boolFlag = true : boolFlag = false;
+        if (boolFlag === true){
+            return true;
+        }
+    } return boolFlag;
+}
 
 /** _.each
 * Arguments:
