@@ -227,6 +227,16 @@ _.each = function(collection, func){
 *   _.unique([1,2,2,4,5,6,5,2]) -> [1,2,4,5,6]
 */
 
+_.unique = function(array){
+    
+}
+
+/*
+_.unique = function(array){
+    let uniqueArr = [... new Set(array)];
+    return uniqueArr;
+}
+*/
 
 /** _.filter
 * Arguments:
