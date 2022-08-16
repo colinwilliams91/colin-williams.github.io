@@ -228,7 +228,14 @@ _.each = function(collection, func){
 */
 
 _.unique = function(array){
-
+    let output = [];
+    for (let i = 0; i < array.length; i++){
+        if (_.indexOf(array, array[i]) === i){
+            output.push(array[i]);
+        } else {
+            
+        }
+    } return output;
 }
 
 /*
