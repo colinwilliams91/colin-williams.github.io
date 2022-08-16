@@ -21,6 +21,9 @@ var _ = {};
 *   _.identity({a: "b"}) === {a: "b"}
 */
 
+_.identity = function(value){
+    return value;
+}
 
 /** _.typeOf
 * Arguments:
@@ -42,6 +45,27 @@ var _ = {};
 * _.typeOf([1,2,3]) -> "array"
 */
 
+_.typeOf = function(value){
+    if (typeof(value) === "string") {
+        return "string";
+    } else if (typeof(value) === "number") {
+        return "number";
+    } else if (typeof(value) === "boolean") {
+        return "boolean";
+    } else if (value instanceof Date) {
+        return "date";
+    } else if (Array.isArray(value) === true) {
+        return "array";
+    } else if (typeof(value) === "object" && value !== null && !Array.isArray(value) && !(value instanceof Date)) {
+        return "object";
+    } else if (typeof(value) === "undefined") {
+        return "undefined";
+    } else if (typeof(value) === "function") {
+        return "function";
+    } else {
+        return "null";
+    }
+}
 
 /** _.first
 * Arguments:
@@ -130,6 +154,18 @@ var _ = {};
 *      -> should log "a" "b" "c" to the console
 */
 
+_.each = function(collection, func){
+    //determine if collection is an array
+    if (Array.isArray(collection)){
+        for (var i = 0; i <collection.length; i++){
+        func(collection[i], i, collection);
+        }
+    } else { // it's in object
+        for (var key in collection){
+            func(collection[key], key, collection);
+        }
+    }
+}
 
 /** _.unique
 * Arguments:
