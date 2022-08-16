@@ -119,6 +119,24 @@ _.first = function(array, number){
 *   _.last(["a", "b", "c"], 2) -> ["b", "c"]
 */
 
+_.last = function(array, number){
+    if (!Array.isArray(array)){
+        return [];
+    }
+    if (typeof(number) !== "number"){
+        return array[array.length - 1];
+    }
+    if (number > array.length){
+        return array;
+    }
+    let output = [];
+    for (let i = array.length - number; i < array.length; i++){
+        // we still want the results to return in ascending order
+        // so, we will start at the index of array.length - input number and iterate up
+        output.push(array[i]);
+    } return output;
+}
+
 
 /** _.indexOf
 * Arguments:
