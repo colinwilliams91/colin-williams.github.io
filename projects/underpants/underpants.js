@@ -228,7 +228,7 @@ _.each = function(collection, func){
 */
 
 _.unique = function(array){
-    
+
 }
 
 /*
@@ -384,7 +384,7 @@ _.map = function(collection, func){
 */
 
 
-/** _.reduce
+/** _.reduce // will go over in class 8/17
 * Arguments:
 *   1) An array
 *   2) A function
