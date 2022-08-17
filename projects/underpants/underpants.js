@@ -481,6 +481,54 @@ _.every = function(collection, func){
 *   _.some([1,2,3], function(e){return e % 2 === 0}) -> true
 */
 
+_.some = function(collection, func){
+    // determine if func was not passed a value
+    if (!func){ // if func === undefined
+        // determine if array
+        if (Array.isArray(collection)){
+            // iterate over collection using for loop
+            for (let i = 0; i < collection.length; i++){
+                // determine if the current value is falsy
+                if (collection[i]){ // if collection[i] !== truthy
+                    return true;
+                } 
+            } return false;
+        } else { // else if collection is an object
+            // iterate over keys in object
+            for (let key in collection){
+                // if current value is falsy
+                if (collection[key]){
+                    return true;
+                } 
+            } return false;
+
+        } 
+
+    } else { // else, func was passed a value
+                // determine if collection is an array
+                if (Array.isArray(collection)){
+                    // iterate through array
+                    for (let i = 0; i < collection.length; i++){
+                        // determine if the current value returns false when passed into func
+                        if (func(collection[i], i, collection) === true){
+                            // if false, return false
+                            return true;
+                        } 
+                    } return false;
+                } else { // else if collection is an object
+                    // iterate through object
+                    for (let key in collection){
+                        // determine if current value returns false when passed into func
+                        if (func(collection[key], key, collection) === true){
+                            // if false, return false
+                            return true;
+                        } 
+                    } return false;
+                }
+    }
+    // what do to if we reach this code??
+    return true;
+}
 
 /** _.reduce // will go over in class 8/17
 * Arguments:
