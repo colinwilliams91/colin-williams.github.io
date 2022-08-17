@@ -349,7 +349,7 @@ _.map = function(collection, func){
     // create output variable and initialize as empty array
     var output = [];
     // determine if collection is an array
-    if (Array.isArray(collection)) {
+    if (Array.isArray(collection)){
         // iterate through array
         for (let i = 0; i < collection.length; i++){
             // push the result of invoking func on current value, index, and collection into output
@@ -411,6 +411,54 @@ _.pluck = function(array, property){
 *   _.every([1,2,3], function(e){return e % 2 === 0}) -> false
 */
 
+_.every = function(collection, func){
+    // determine if func was not passed a value
+    if (!func){ // if func === undefined
+        // determine if array
+        if (Array.isArray(collection)){
+            // iterate over collection using for loop
+            for (let i = 0; i < collection.length; i++){
+                // determine if the current value is falsy
+                if (!collection[i]){ // if collection[i] !== truthy
+                    return false;
+                }
+            }
+        } else { // else if collection is an object
+            // iterate over keys in object
+            for (let key in collection){
+                // if current value is falsy
+                if (!collection[key]){
+                    return false;
+                }
+            }
+
+        }
+
+    } else { // else, func was passed a value
+                // determine if collection is an array
+                if (Array.isArray(collection)){
+                    // iterate through array
+                    for (let i = 0; i < collection.length; i++){
+                        // determine if the current value returns false when passed into func
+                        if (func(collection[i], i, collection) !== true){
+                            // if false, return false
+                            return false;
+                        }
+                    }
+                } else { // else if collection is an object
+                    // iterate through object
+                    for (let key in collection){
+                        // determine if current value returns false when passed into func
+                        if (func(collection[key], key, collection) !== true){
+                            // if false, return false
+                            return false;
+                        }
+                    }
+                }
+    }
+    // what do to if we reach this code??
+    return true;
+}
 
 /** _.some
 * Arguments:
