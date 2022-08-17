@@ -313,6 +313,21 @@ _.reject = function(array, func){
 }
 */
 
+_.partition = function(array, func){
+    let output = [];
+    let outputTruthy = [];
+    let outputFalsy = [];
+    for (let i = 0; i < array.length; i++){
+        if (func(array[i], i, array) === true){
+            outputTruthy.push(array[i]);
+        } else if (func(array[i], i, array) !== true){
+            outputFalsy.push(array[i]);
+        } 
+    } 
+    output.push(outputTruthy);
+    output.push(outputFalsy);
+    return output;
+}
 
 /** _.map
 * Arguments:
