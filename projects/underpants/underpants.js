@@ -185,7 +185,8 @@ _.contains = function(array, value){
         if (boolFlag === true){
             return true;
         }
-    } return boolFlag;
+    } 
+    return boolFlag;
 }
 
 /** _.each
@@ -380,14 +381,10 @@ _.map = function(collection, func){
 */
 
 _.pluck = function(array, property){
-    let output = [];
-    for (let i = 0; i < array.length; i++){
-       // _.map(array[i], function(property){
-
-        //}
-    }
-
-    return output;
+    return _.map(array, function(obj){
+        return obj[property];
+    });
+    //return _.map(array, element => element[property]);   ES6 solution
 }
 
 /** _.every
