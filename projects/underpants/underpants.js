@@ -530,7 +530,7 @@ _.some = function(collection, func){
     return true;
 }
 
-/** _.reduce // will go over in class 8/17
+/** _.reduce 
 * Arguments:
 *   1) An array
 *   2) A function
@@ -548,6 +548,19 @@ _.some = function(collection, func){
 * Examples:
 *   _.reduce([1,2,3], function(previousSum, currentValue, currentIndex){ return previousSum + currentValue }, 0) -> 6
 */
+
+_.reduce = function(array, func, seed){
+    let accumulator = seed;
+    let i = 0;
+    if (seed === undefined){
+        accumulator = array[0];
+        i = 1;
+    }
+    for (; i < array.length; i++){
+        accumulator = func(accumulator, array[i], i);
+    }
+    return accumulator;
+}
 
 
 /** _.extend
