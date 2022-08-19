@@ -213,7 +213,7 @@ _.each = function(collection, func){
         }
     } else { // it's in object
         for (var key in collection){
-            func(collection[key], key, collection);
+        func(collection[key], key, collection);
         }
     }
 }
