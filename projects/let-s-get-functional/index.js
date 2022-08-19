@@ -62,7 +62,19 @@ var youngestCustomer = function(array){
     return youngest.name;
 }
 
-var averageBalance;
+var averageBalance = function(array){
+    
+    let money = _.map(array, function(customer){
+        return parseFloat(customer.balance.substring(1).replace(",", ""));
+    });
+
+    let totalBalance = _.reduce(money, function(accumulator, current){
+        return accumulator += current
+    });
+
+    return totalBalance / array.length;
+
+}
 
 var firstLetterCount;
 
