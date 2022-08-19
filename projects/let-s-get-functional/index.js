@@ -76,7 +76,15 @@ var averageBalance = function(array){
 
 }
 
-var firstLetterCount;
+var firstLetterCount = function(array, letter){
+    let output = _.reduce(array, function(accumulator, current){
+        if (current.name[0] === letter.toUpperCase()){
+            accumulator += 1;
+        } 
+        return accumulator;
+    }, 0);
+    return output;
+};
 
 var friendFirstLetterCount;
 
