@@ -86,7 +86,13 @@ var firstLetterCount = function(array, letter){
     return output;
 };
 
-var friendFirstLetterCount;
+var friendFirstLetterCount = function(array, customer, letter){
+    for (var key in customer){
+        if (key === friend){
+            let output = _.friendFirstLetterCount(customer, letter);
+        }
+    } return output;
+};
 
 var friendsCount;
 
