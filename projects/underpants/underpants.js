@@ -573,9 +573,11 @@ _.reduce = function(array, func, seed){
 *   _.extend(data, {a:"two"}); -> data now equals {a:"two"}
 */
 
-_.extend = function(destination, ...objects){
-    let destination2 = { ...objects };
-    return destination2;
+_.extend = function(target, ...objects){
+    let returnedObject = Object.assign(target, ...objects);
+    return returnedObject;
+    //let destination2 = { ...objects };
+    //return destination2;
 }
 
 
