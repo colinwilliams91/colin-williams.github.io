@@ -574,24 +574,8 @@ _.reduce = function(array, func, seed){
 */
 
 _.extend = function(target, ...objects){
-    let returnedObject = Object.assign(target, ...objects);
-    return returnedObject;
-    //let destination2 = { ...objects };
-    //return destination2;
+    return Object.assign(target, ...objects);
 }
-
-
-
-
-
-// _.extend = function(source, others){
-//     _.every(source, function(){
-//         if (source.key !== others.key){
-//             return source.others.key;
-//         }
-//     });
-//     return source;
-// }
 
 
 
