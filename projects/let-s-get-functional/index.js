@@ -114,7 +114,17 @@ var friendFirstLetterCount = function(array, customer, letter){
 //     }
 // }
 
-var friendsCount;
+var friendsCount = function(array, name){
+    for (let i = 0; i < array.length; i++){
+        let output = [];
+        if (_.contains(array[i].friends, name)){
+            output.push(array[i].name);
+            console.log(output);
+        }
+        
+    }
+    return output;
+}
 
 var topThreeTags;
 
