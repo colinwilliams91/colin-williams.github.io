@@ -116,19 +116,37 @@ var friendFirstLetterCount = function(array, customer, letter){
 
 var friendsCount = function(array, name){
     for (let i = 0; i < array.length; i++){
-        let output = [];
-        if (_.contains(array[i].friends, name)){
-            output.push(array[i].name);
-            console.log(output);
+        for (let key in array[i]){
+            if (key === friends){
+                let output = [];
+                if (_.contains(array[i].friends, name)){
+                    output.push(array[i].name);
+                    console.log(output);
+                }
+            }
         }
-        
     }
     return output;
 }
 
 var topThreeTags;
 
-var genderCount;
+var genderCount = function(array, output={}){
+      // base
+  if (array.length === 0){
+    // return ??
+  return output;
+    
+  }
+  // recursion
+  
+  if (output[array[0].gender]){
+      output[array[0].gender] += 1;
+  } else {
+    output[array[0].gender] = 1;
+  }
+  return genderCount(array.slice(1), output);
+};
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
