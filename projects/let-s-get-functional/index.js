@@ -129,18 +129,30 @@ var friendsCount = function(array, name){
     return output;
 }
 
-var topThreeTags = function(array, output={}){
-    if (array.length === 0){
-        return output;
-    }
 
-    if (output[array[0].tags]){
-        output[array[0].tags] += 1;
-    } else {
-        output[array[0].tags] = 1;
-    }
-    return topThreeTags(array.slice(1), output);
-}
+// var topThreeTags = function(array){
+//     for (let i = 0; i < array.length; i++){
+//         let output = _.reduce(array, function(accumulator, current){
+//             if (array[i].tags)
+//         });
+//     }
+// }
+
+
+// RECURSION ATTEMPT__________
+// var topThreeTags = function(array, output=[]){
+//     if (array.length === 0){
+//         return output;
+//     }
+//     for (let i = 0; i < array[0].tags.length; i++){
+//         if (output[array[0].tags[i]]){
+//             output[array[0].tags[i]] += 1;
+//         } else {
+//             output.push(array[0].tags[i]);
+//         }
+//         return topThreeTags(array.slice(1), output);
+//     }
+// }
 
 var genderCount = function(array, output={}){
       // base
