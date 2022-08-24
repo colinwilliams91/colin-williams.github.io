@@ -129,7 +129,18 @@ var friendsCount = function(array, name){
     return output;
 }
 
-var topThreeTags;
+var topThreeTags = function(array, output={}){
+    if (array.length === 0){
+        return output;
+    }
+
+    if (output[array[0].tags]){
+        output[array[0].tags] += 1;
+    } else {
+        output[array[0].tags] = 1;
+    }
+    return topThreeTags(array.slice(1), output);
+}
 
 var genderCount = function(array, output={}){
       // base
