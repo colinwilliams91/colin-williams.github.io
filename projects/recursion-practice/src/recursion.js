@@ -111,6 +111,14 @@ var reverse = function(string){
 
 // 10. Write a function that determines if a string is a palindrome.
 var palindrome = function(string) {
+  let replaced = string.replace(/[\s]/g, "").toLowerCase();
+  if (replaced.length === 0){
+    return true;
+  } else if(replaced[0] === replaced[replaced.length - 1]){
+    return palindrome(replaced.slice(1, -1));
+  } else if (replaced[0] !== replaced[replaced.length - 1]){
+    return false;
+  }
 };
 
 // 11. Write a function that returns the remainder of x divided by y without using the
@@ -125,7 +133,27 @@ var modulo = function(x, y) {
 // JavaScript's Math object.
 // ATTENTION DO NOT LEAVE COMMENTS IN THIS FUNCTION. The test is looking for any ('/').
 var multiply = function(x, y) {
+  if (y === 0){
+    return 0;
+  } else if (y > 0){
+    return x + multiply(x, y - 1);
+  } else if (y < 0){
+    return -multiply(x, -y);
+  } 
 };
+
+/**
+ * 
+ * @param {3} x 
+ * @param {5} y 
+ * 
+ * 3 + (3, 4)
+ * 3 + 3 + (3, 3)
+ * 3 + 3 + 3 + (3, 2)
+ * 3 + 3 + 3 + 3 + (3, 1)
+ * 3 + 3 + 3 + 3 + 3 + (3, 0)
+ * 
+ */
 
 // 13. Write a function that divides two numbers without using the / operator  or
 // JavaScript's Math object.
@@ -146,6 +174,13 @@ var gcd = function(x, y) {
 // compareStr('', '') // true
 // compareStr('tomato', 'tomato') // true
 var compareStr = function(str1, str2) {
+  if (str1.length === 0 && str2.length === 0){
+    return true;
+  } else if (str1[0] === str2[0]){
+    return compareStr(str1.slice(1), str2.slice(1));
+  } else if (str1[0] !== str2[0]){
+    return false;
+  }
 };
 
 // 16. Write a function that accepts a string and creates an array where each letter

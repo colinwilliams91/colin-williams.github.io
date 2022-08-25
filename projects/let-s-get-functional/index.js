@@ -138,6 +138,9 @@ var friendsCount = function(array, name){
 //     }
 // }
 
+// reduce iterates through an array to accumulate and return a value
+// the callback function determines how we accumulate or how we make the accumulator and current interact
+// what we define in our reduce invocation
 
 // RECURSION ATTEMPT__________
 // var topThreeTags = function(array, output=[]){
