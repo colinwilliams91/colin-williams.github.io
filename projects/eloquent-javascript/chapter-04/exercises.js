@@ -16,19 +16,15 @@ function range(start, end, step = start < end ? 1 : -1) {
     return output;
   } 
 
-
-
-
-
-
+// *** WHY DOES THIS BREAK INDEX.HTML ??? ***
 //   if (start === end){
 //     return output;
 //   } else if (end > 0){
-//     for (i = start; i <= end; i++){
+//     for (i = start; i <= end; i += step){
 //       output.push(i);
 //     }
 //   } else if (end < 0){
-//     for (i = start; i >= end; i--){
+//     for (i = start; i >= end; i -+ step){
 //     output.push(i);
 //     }
 //   }
