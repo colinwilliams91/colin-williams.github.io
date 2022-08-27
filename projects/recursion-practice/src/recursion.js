@@ -369,14 +369,31 @@ var augmentElements = function(array, aug) {
 // 33. Reduce a series of zeroes to a single 0.
 // minimizeZeroes([2,0,0,0,1,4]) // [2,0,1,4]
 // minimizeZeroes([2,0,0,0,1,0,0,4]) // [2,0,1,0,4]
-var minimizeZeroes = function(array) {
+var minimizeZeroes = function(array, output=[]) {
+  if (array.length === 0){
+    return output;
+  } else if (array[0] === 0 && array[1] === 0){
+    return minimizeZeroes(array.slice(1), output)
+  } else {
+    output.push(array[0]);
+    return minimizeZeroes(array.slice(1), output);
+  }
 };
 
 // 34. Alternate the numbers in an array between positive and negative regardless of
 // their original sign.  The first number in the index always needs to be positive.
 // alternateSign([2,7,8,3,1,4]) // [2,-7,8,-3,1,-4]
 // alternateSign([-2,-7,8,3,-1,4]) // [2,-7,8,-3,1,-4]
-var alternateSign = function(array) {
+var alternateSign = function(array, output=[]) {
+  if (array.length === 0){
+    return output;
+  } else if (array[0] === 0 && array[1] === 0){
+    return alternateSign(array.slice(1), output)
+  } else {
+    output.push(Math.abs(array[0]));
+    output.push(-Math.abs(array[1]));
+    return alternateSign(array.slice(2), output);
+  }
 };
 
 // 35. Given a string, return a string with digits converted to their word equivalent.
