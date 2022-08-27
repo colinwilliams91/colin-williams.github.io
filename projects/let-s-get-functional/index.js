@@ -130,13 +130,33 @@ var friendsCount = function(array, name){
 }
 
 
-// var topThreeTags = function(array){
-//     for (let i = 0; i < array.length; i++){
-//         let output = _.reduce(array, function(accumulator, current){
-//             if (array[i].tags)
-//         });
-//     }
-// }
+var topThreeTags = function(array){
+    const tagHolder = [];
+    for (let i = 0; i < array.length; i++){
+        tagHolder.push(array[i].tags)
+    }
+    const flatArray = [].concat(...tagHolder);
+
+    let reduced = _.reduce(flatArray, function(accumulator, current){
+        return accumulator[current] ? ++accumulator[current] : accumulator[current] = 1, accumulator;
+    }, {});
+    //console.log(reduced);
+
+    let objArray = Object.entries(reduced);
+    //console.log(objArray);
+
+    let sorted = objArray.sort(function (a, b){
+        return b[1] - a[1]; // a[1] - b[1] with .reverse()
+    });//.reverse();
+    //console.log(sorted);
+
+    let finalArr = [];
+    for (let i = 0; i < 3; i++){
+        finalArr.push(sorted[i][0]);
+    }
+    return finalArr;
+    console.log(finalArr);
+}
 
 // reduce iterates through an array to accumulate and return a value
 // the callback function determines how we accumulate or how we make the accumulator and current interact
@@ -162,7 +182,7 @@ var genderCount = function(array, output={}){
   if (array.length === 0){
     // return ??
   return output;
-    
+
   }
   // recursion
   
