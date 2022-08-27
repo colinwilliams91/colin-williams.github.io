@@ -68,8 +68,18 @@ function reverseArrayInPlace(array) {
     array[i] = array[array.length - 1 - i];
     array[array.length - 1 - i] = old;
   }
-  return array;
+
+  //return array.reverse();
 }
+
+// [1, 2, 3, 4, 5]
+// 
+/**
+ * old === array[i] // --> 2
+ * 2 === 5 - 1 // --> 4
+ * 4 === old
+ */
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // arrayToList /////////////////////////////////////////////////////////////////
@@ -131,6 +141,9 @@ function deepEqual(x, y){
     }
   }
   return true;
+
+  //return JSON.stringify(x) === JSON.stringify(y) ? true : false;
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////

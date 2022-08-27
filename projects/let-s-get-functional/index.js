@@ -131,11 +131,11 @@ var friendsCount = function(array, name){
 
 
 var topThreeTags = function(array){
-    const tagHolder = [];
+    let tagHolder = [];
     for (let i = 0; i < array.length; i++){
         tagHolder.push(array[i].tags)
     }
-    const flatArray = [].concat(...tagHolder);
+    let flatArray = [].concat(...tagHolder);
 
     let reduced = _.reduce(flatArray, function(accumulator, current){
         return accumulator[current] ? ++accumulator[current] : accumulator[current] = 1, accumulator;
