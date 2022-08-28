@@ -95,40 +95,34 @@ var friendFirstLetterCount = function(array, customer, letter){
     }
 }
 
-// for (let i = 0; i < array.length; i++){
-//     if (array[i].name === customer){
-//         return firstLetterCount(array[i].friends, letter);
-//     }
-// }
-
+// SOLVED with NESTED FOR LOOPS
+// var friendsCount = function(array, name){
+//     let customerNames = [];
 //     for (let i = 0; i < array.length; i++){
-//         if (array[i].name === customer){
-//             return _.filter(_.map(array[i].friends, function(friend){
-//                 if (friend.name[0].toUpperCase() === letter.toUpperCase()){
-//                     return friend.name;
-//                 } 
-//             }), function (element){
-//                 return element !== undefined;
-//             }).length
+//         for (let j = 0; array[i].friends.length; j++){
+//             if (array[i].friends[j] === name){
+//                 customerNames.push(array[i].name);
+//             }
 //         }
 //     }
+//     return customerNames;
 // }
 
+// SOLVED with _.FILTER && _.MAP
 var friendsCount = function(array, name){
-    for (let i = 0; i < array.length; i++){
-        for (let key in array[i]){
-            if (key === friends){
-                let output = [];
-                if (_.contains(array[i].friends, name)){
-                    output.push(array[i].name);
-                    console.log(output);
-                }
+    // use _.filter and _.map
+    let filtered = _.filter(array, function(customer){
+        for (let i = 0; i < customer.friends.length; i++){
+            if (customer.friends[i].name === name){
+                return true;
             }
-        }
-    }
+        } return false;
+    });
+    let output = _.map(filtered, function(customer){
+        return customer.name;
+    });
     return output;
 }
-
 
 var topThreeTags = function(array){
     let tagHolder = [];
@@ -162,20 +156,6 @@ var topThreeTags = function(array){
 // the callback function determines how we accumulate or how we make the accumulator and current interact
 // what we define in our reduce invocation
 
-// RECURSION ATTEMPT__________
-// var topThreeTags = function(array, output=[]){
-//     if (array.length === 0){
-//         return output;
-//     }
-//     for (let i = 0; i < array[0].tags.length; i++){
-//         if (output[array[0].tags[i]]){
-//             output[array[0].tags[i]] += 1;
-//         } else {
-//             output.push(array[0].tags[i]);
-//         }
-//         return topThreeTags(array.slice(1), output);
-//     }
-// }
 
 var genderCount = function(array, output={}){
       // base
