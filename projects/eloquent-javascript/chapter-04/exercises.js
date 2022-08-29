@@ -87,7 +87,7 @@ function reverseArrayInPlace(array) {
 
 function arrayToList(array) {
   let rest = null;
-  for (i = array.length - 1; i >= 0; i--){
+  for (let i = array.length - 1; i >= 0; i--){
     rest = {value: array[i], rest: rest};
   }
   return rest;
@@ -97,8 +97,14 @@ function arrayToList(array) {
 // listToArray /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function listToArray() {
-
+function listToArray(list) {
+  let array = [];
+  // iterate over list
+  for (let i = list; i; i = i.rest){
+    // push values from list to array
+    array.push(i.value);
+  }
+  return array;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
