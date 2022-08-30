@@ -2,9 +2,18 @@
 // flatten /////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function flatten(array) {
-  let output = [];
-  return output.concat(...array);
+// SOLVED with SPREAD OPERATOR
+// function flatten(arrays) {
+//   let output = [];
+//   return output.concat(...arrays);
+// }
+
+// SOLVED with .REDUCE
+function flatten(arrays) {
+  let output = arrays.reduce(function(flat, current){
+    return flat.concat(current);
+  }, []); 
+  return output;
 }
 
 // /////////////////////////////////////////////////////////////////////////////
