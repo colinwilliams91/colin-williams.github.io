@@ -30,8 +30,19 @@ function loop(start, test, update, body) {
 // every ///////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function every() {
+// //SOLVED with SOME
+// function every(array, predicate) {
+//   return !array.some(element => !predicate(element));
+// }
 
+// SOLVED with FOR LOOP
+function every(array, predicate) {
+  for (i = 0; i < array.length; i++){
+    if (!predicate(array[i])){
+      return false;
+    }
+  }
+  return true;
 }
 
 // /////////////////////////////////////////////////////////////////////////////
