@@ -39,8 +39,27 @@ function every() {
 // /////////////////////////////////////////////////////////////////////////////
 
 // **will likely demonstrate in class**
-function dominantDirection() {
+function dominantDirection(string) {
+  
+  let ltr = [];
+  let rtl = [];
 
+  for (let i = 0; i < string.length; i++){
+    let scriptName = characterScript(string.charCodeAt(i)); // null or { ... }
+
+    if (scriptName !== null){
+      if (scriptName.direction === "ltr"){
+        ltr.push(scriptName);
+      } else {
+        rtl.push(scriptName);
+      }
+    }
+  }
+  if (ltr.length > rtl.length){
+    return "ltr";
+  } else {
+    return "rtl";
+  }
 }
 
 // /////////////////////////////////////////////////////////////////////////////
