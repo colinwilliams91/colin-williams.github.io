@@ -95,18 +95,27 @@ var friendFirstLetterCount = function(array, customer, letter){
     }
 }
 
-// SOLVED with NESTED FOR LOOPS
-// var friendsCount = function(array, name){
-//     let customerNames = [];
-//     for (let i = 0; i < array.length; i++){
-//         for (let j = 0; array[i].friends.length; j++){
-//             if (array[i].friends[j] === name){
-//                 customerNames.push(array[i].name);
-//             }
-//         }
-//     }
-//     return customerNames;
-// }
+// SOLVED with REDUCE
+// var friendFirstLetterCount = function(array, customer, letter){
+//     var friendly = _.reduce(array, function(acc, current){
+//          // determine if the current item matches the input customer
+//             if(current.name === customer){
+//                 // iterate through current friends property
+//               for(var j = 0; j < current.friends.length; j++){
+//                 //determine if current friends names first letter uppercased matches the given letter uppercased
+//                 if(current.friends[j].name.charAt(0).toUpperCase() === letter.toUpperCase()){
+//                     //add and assign accumulator to 1
+//                     acc += 1;
+//                 }
+
+//                }    
+//             }//return accumulator
+//              return acc;
+//     }, 0);//return my friendly function
+//     return friendly;
+// };
+
+
 
 // SOLVED with _.FILTER && _.MAP
 var friendsCount = function(array, name){
@@ -123,6 +132,38 @@ var friendsCount = function(array, name){
     });
     return output;
 }
+
+//SOLVED with REDUCE
+// var friendsCount = function(arr, name){
+//     var friendList = _.reduce(arr, function(acc, current){
+//         //iterating through my current friends property
+//             for(var i = 0; i < current.friends.length; i++){
+//                 //determining if my current name has a given name in its friends list
+//                 if(current.friends[i].name === name){
+//                     //if so it will push the current name of the customer into my accumulator array
+//                     acc.push(current.name);
+//                 }
+               
+//             } //return accumulator array
+//             return acc;
+//     },[]); //return my friendList function
+//     return friendList;
+// };
+
+// SOLVED with NESTED FOR LOOPS
+// var friendsCount = function(array, name){
+//     let customerNames = [];
+//     for (let i = 0; i < array.length; i++){
+//         for (let j = 0; array[i].friends.length; j++){
+//             if (array[i].friends[j] === name){
+//                 customerNames.push(array[i].name);
+//             }
+//         }
+//     }
+//     return customerNames;
+// }
+
+
 
 var topThreeTags = function(array){
     let tagHolder = [];
