@@ -36,3 +36,14 @@
 /**
  * arguments passed to a function are actually an object that can be iterated through or accessed. ex: arguments[i], arguments.length
  */
+
+
+
+// SCOPE
+
+/**
+ * Function Scope: When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function.
+ * 
+ * Block Scope: variables declared inside the if or switch conditions or inside for or while loops, are accessible within that particular condition or loop.
+ * Variables declared within curly braces are refernced as within block scope.
+ */
