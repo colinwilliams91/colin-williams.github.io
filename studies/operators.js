@@ -54,7 +54,7 @@
  /**
   * *************
   * *************
-  * 2. COMPARISON
+  * 3. COMPARISON
   * A comparison operator compares its operands and returns
   * a logical value based on whether the comparison is true.
   * The operands can be numerical, string, logical, or object values.
@@ -69,6 +69,7 @@
   * *************
   * 
   */
+
 
 //___Operator______Description______Examples_returning_true__
 //***********************************************************
@@ -104,3 +105,86 @@
 // or equal (<=) left operand is less 	var2 <= 5
 //              than or equal to the             
 //              right operand.
+//
+//
+
+
+ /**
+  * *************
+  * *************
+  * 4. LOGICAL
+  * Logical operators are typically used with Boolean (logical) values;
+  * when they are, they return a Boolean value. However, the && and || operators
+  * actually return the value of one of the specified operands, so if these
+  * operators are used with non-Boolean values, they may return a non-Boolean value.
+  * *************
+  * *************
+  * 
+  */
+
+
+//___Operator_______________Usage_______Description_____________________________________________
+//**********************************************************************************************
+//   Logical AND (&&)   expr1 && expr2	Returns expr1 if it can be converted to false; 
+//                                      otherwise, returns expr2. Thus, when used with 
+//                                      Boolean values, && returns true if both operands 
+//                                      are true; otherwise, returns false.
+//
+//   Logical OR (||)	expr1 || expr2	Returns expr1 if it can be converted to true; otherwise,
+//                                      returns expr2. Thus, when used with Boolean values,
+//                                      || returns true if either operand is true; if both are
+//                                      false, returns false.
+//
+//   Logical NOT (!)	    !expr	    Returns false if its single operand that can be 
+//                                      converted to true; otherwise, returns true.
+//
+//
+
+
+ /**
+  * ***********
+  * ***********
+  * 5. UNARY
+  * A unary operation is an operation with only one operand.
+  * ***********
+  * ***********
+  * 
+  */
+
+let x = 1;
+  //unary plus
+  +x;         // returns --> 1, converts to positive number         
+  //unary negation
+  -x;         // returns --> -1, converts to negative number   
+  //increment
+  x++;        // returns --> 2, adds 1 to operand
+  //decrement
+  x--;        // returns --> to 0, subtracts 1 from operand
+  //logical not
+  !x;         // returns --> false, converts to Boolean and negates the operand
+  //typeof
+  typeof(x);  // returns --> "number", returns a string of the operand's datatype
+
+
+   /**
+  * *************
+  * *************
+  * 6. TERNARY
+  * The conditional (ternary) operator is the only JavaScript operator that takes three operands: 
+  * a condition followed by a question mark (?), then an expression to execute if the condition
+  * is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy.
+  * *************
+  * *************
+  * 
+  */
+
+
+    function passBootcamp(didHomework) { // if the argument that is passed in resolves to true or false
+        return (didHomework ? "You pass the exam!" : "You fail the exam."); // ternary operates much like an if / else statement
+      }
+      
+      console.log(passBootcamp(1 + 1 === 2));  // expected output --> "You pass the exam!"
+      
+      console.log(passBootcamp(false));        // expected output --> "You fail the exam."
+      
+      console.log(passBootcamp(null));         // expected output --> "You fail the exam."
