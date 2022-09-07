@@ -6,7 +6,11 @@
  * 
  * 1: Strings are a primitive and immutable data-type.
  * 
- * 2: We will use .methods() to manipulate strings.
+ * 2: We can use .methods() to manipulate strings.
+ * 
+ * 3: We can also use operators to manipulate strings.
+ * 
+ * 4: We can use bracket ([]) notation to access characters in a string just like arrays.
  * 
  */
 
@@ -77,3 +81,29 @@
 
 str7.substring(2, 6);
 console.log(str7.substring(2, 6)); // => "love"
+
+
+// OPERATORS for STRING MANIPULATION
+// (+) Will concat or combine multiple strings.
+// (=) Will assign a string to something.
+// (+=) Will concat and assign (append) string values to existing variable (in a copy)
+
+// CONCATENATE OPERATOR
+// (+)
+
+console.log("My name is" + " " + "Colin Williams.") // --> "My name is Colin Williams."
+
+// CONCATENATE-ASSIGNMENT OPERATOR
+// (+=)
+
+let firstName = "Colin";
+let fullName = firstName += " Williams";
+console.log(fullName); // --> "Colin Williams"
+
+// ASSIGNMENT OPERATOR
+// (=)
+
+const a = 'a';
+const b = 'b';
+console.log(a); // --> "a"
+
