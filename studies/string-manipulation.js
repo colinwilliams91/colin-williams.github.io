@@ -1,6 +1,7 @@
-
 /**
- * STRING MANIPULATION
+ * ***************************
+ * *** STRING MANIPULATION ***
+ * ***************************
  * 
  * 0: A string is a sequence of characters wrapped in single or double-quotes.
  * 
