@@ -73,36 +73,37 @@
 
 //___Operator______Description______Examples_returning_true__
 //***********************************************************
-//   Equal  	Returns true if the      3 == var1
-//    (==)      operands are equal.	    "3" == var1
-//                                       3 == "3"
-// Not equal    Returns true if the      var1 != 4
-//    (!=)      operands are not equal   var2 != "3"
+//   Equal  	Returns true if the             3 == var1
+//    (==)      operands are equal.	         "3" == var1
+//                                            3 == "3"
+//
+// Not equal    Returns true if the           var1 != 4
+//    (!=)      operands are not equal        var2 != "3"
 //   	
 // Strict equal Returns true if the 
-//    (===)     operands are equal and   3 === var1
+//    (===)     operands are equal and        3 === var1
 //              of the same type
 //   	
-// Strict not   Returns true if the      3 !== '3'
-//  equal (!==)	operands are of the same var1 !== "3"
+// Strict not   Returns true if the           3 !== '3'
+//  equal (!==)	operands are of the same var  1 !== "3"
 //              type but not equal,
 //              or are of different type.
 //
-// Greater than Returns true if the  	 var2 > var1
-//    (>)       left operand is greater "12" > 2                      
+// Greater than Returns true if the  	        var2 > var1
+//    (>)       left operand is greater      "12" > 2                      
 //              than the right operand.
 //
-// Greater than  Returns true if the     var1 >= 3
-// or equal (>=) left operand is  	     var2 >= var1
+// Greater than  Returns true if the          var1 >= 3
+// or equal (>=) left operand is  	          var2 >= var1
 //               greater than or equal
 //               to the right operand.
 //   
-// Less than    Returns true if the left var1 < var2
-//    (<)	    operand is less than     "2" < 12 
+// Less than    Returns true if the left      var1 < var2
+//    (<)	      operand is less than         "2" < 12 
 //              the right operand.
 //
-//   Less than  Returns true if the     var1 <= var2
-// or equal (<=) left operand is less 	var2 <= 5
+//   Less than  Returns true if the           var1 <= var2
+// or equal (<=) left operand is less 	      var2 <= 5
 //              than or equal to the             
 //              right operand.
 //
