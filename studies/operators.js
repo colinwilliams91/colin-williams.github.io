@@ -40,15 +40,15 @@
   */
 
 
-// Operator	 Description
-//   +	    // Addition
-//   -	    // Subtraction
-//   *	    // Multiplication
-//   **	    // Exponentiation (ES6)
-//   /	    // Division
-//   %	    // Modulus (Division Remainder)
-//   ++	    // Increment
-//   --	    // Decrement
+// Operator	 Description                    Example
+//   +	    // Addition                     1 + 1 = 2
+//   -	    // Subtraction                  2 - 1 = 1
+//   *	    // Multiplication               2 * 2 = 4
+//   **	    // Exponentiation (ES6)         2 ** 2 = 4
+//   /	    // Division                     4 / 2 = 2
+//   %	    // Modulus (Division Remainder) 7 % 2 = 1 (7 / 2 = 3 remainder of 1)
+//   ++	    // Increment                    1++ = 2
+//   --	    // Decrement                    2-- = 1
 
 
  /**
@@ -123,22 +123,22 @@
   */
 
 
-//___Operator_______________Usage_______Description_____________________________________________
+//___Operator_______________Usage_______Description_____________________________________________  EXAMPLES:
 //**********************************************************************************************
-//   Logical AND (&&)   expr1 && expr2	Returns expr1 if it can be converted to false; 
-//                                      otherwise, returns expr2. Thus, when used with 
-//                                      Boolean values, && returns true if both operands 
+//   Logical AND (&&)   expr1 && expr2	Returns expr1 if it can be converted to false;            if (10 > 5 && 10 / 2 === 5){
+//                                      otherwise, returns expr2. Thus, when used with                return true; // --> returns true because 
+//                                      Boolean values, && returns true if both operands          }                       BOTH conditions are true
 //                                      are true; otherwise, returns false.
 //
-//   Logical OR (||)	expr1 || expr2	Returns expr1 if it can be converted to true; otherwise,
-//                                      returns expr2. Thus, when used with Boolean values,
-//                                      || returns true if either operand is true; if both are
+//   Logical OR (||)	expr1 || expr2	Returns expr1 if it can be converted to true; otherwise,    if (10 > 5 || 10 < 5){
+//                                      returns expr2. Thus, when used with Boolean values,           return true; // --> returns true because 
+//                                      || returns true if either operand is true; if both are    }                       ONE of the conditions are true
 //                                      false, returns false.
 //
-//   Logical NOT (!)	    !expr	    Returns false if its single operand that can be 
-//                                      converted to true; otherwise, returns true.
-//
-//
+//   Logical NOT (!)	    !expr	      Returns false if its single operand that can be             let x = true;
+//                                      converted to true; otherwise, returns true.               if (!x){
+//                                                                                                    return false; // !x === false, so return false (because x === true)
+//                                                                                                }
 
 
  /**
