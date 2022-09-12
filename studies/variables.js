@@ -82,6 +82,17 @@ myVariable = "string"; // re-assigned to string
  // (they will hoist and return "unitiialized" error) and therefore can only be accessed after the code interpreter has hit its declarative line of code. 
  // lets can be re-assigned within their scope. 
 
+ let dog = "chad"; // globally scoped let variable
+
+ function newDog(){
+    let newDog1 = "brad"; // --> this is a local/function scoped let variable
+    // console.log(newDog1); // --> this would actually print --> "brad" to console because we are accessing the variable inside our function
+ }
+
+ console.log(dog); // prints --> "chad" to the console because "dog" is a globally scoped variable accessible anywhere
+ // console.log(newDog1); // throws an error, because this variable is function scoped and only accesible inside our newDog function
+
+
 
  // console.log(fruit); // ReferenceError: Cannot access 'fruit' before initialization
  let fruit = "orange";  // console.log call above will not work because let has to be initialized before the call.
@@ -110,3 +121,13 @@ const num = 6;       // initialization
  * before their declaration. We can use functions in our program above their declarative lines because of this. 
  */ 
 
+// -- interpreter starts here --
+
+                           // the equivalent of: var lastName;
+
+function nameMe(){
+    let firstName = "Colin"; // this "let" variable will not be hoisted and therefore will not even return "undefined" but will throw an error.
+}
+
+var lastName = "Williams"; // the var lastName will be "hoisted" to the top of the code but its value will remain "undefined" 
+                           // until the code interpreter actually hits this line.
