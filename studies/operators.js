@@ -189,3 +189,5 @@ let x = 1;
       console.log(passBootcamp(false));        // expected output --> "You fail the exam."
       
       console.log(passBootcamp(null));         // expected output --> "You fail the exam."
+
+      
