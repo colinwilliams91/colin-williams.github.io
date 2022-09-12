@@ -49,6 +49,11 @@ console.log(string); // prints --> "string"
 // ***************
 let boolean = true; // true is our "boolean" assignment to variable boolean
 
+// example of Boolean expression:
+if (1 < 10){    // --> will resolve to true
+    return true;// --> will return true
+}
+
 /**
  * Booleans can be one of two values: true or false (essentially 0 or 1).
  * In some cases it will imply the existence of a value or its non-existence.

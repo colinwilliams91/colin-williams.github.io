@@ -68,7 +68,7 @@ const functionExpression = function(width, height) { // Assigns our function to 
 
  function pizza(){                                 // function declaration
 
-     let cheese = "cheese";                        // a let that is scoped to the block
+     let cheese = "cheese";                        // a let that is function scoped (declared in a function)
 
      function topping(){                           // another function in the block
 
